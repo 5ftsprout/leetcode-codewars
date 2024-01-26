@@ -284,7 +284,7 @@ function duplicateEncode(word){
 }
 
 
-//Replace With Alphabet Position
+*//Replace With Alphabet Position
 function alphabetPosition(text) {
     let alphabet = 'abcdefghijklmnopqrstuvwxyz';
     const arrNum = [];
