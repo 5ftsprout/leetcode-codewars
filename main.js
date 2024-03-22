@@ -1,3 +1,19 @@
+//Who Likes It?
+function likes(names) {
+  let who
+  if (names.length == 0) {
+    return `no one likes this`
+  } else if (names.length == 1) {
+     return `${names[0]} likes this`
+  } else if (names.length == 2) {
+    who = `${names[0]} and ${names[1]}`
+  } else if (names.length == 3) {
+    who = `${names[0]}, ${names[1]} and ${names[2]}`
+  } else {
+    who = `${names[0]}, ${names[1]} and ${names.length-2} others`
+  }
+  return `${who} like this`
+}
 
 
 //Find the Odd Int
