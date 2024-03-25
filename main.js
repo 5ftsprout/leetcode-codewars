@@ -1,3 +1,24 @@
+
+/*function parseInt(string) {
+  let arr = string.split(' ')
+  arrString = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen'
+  arrNum = 123456789101112131415
+  arr.splice(arr.indexOf('one'),1,1)
+  arr.splice(arr.indexOf('nine'),1,9)
+  console.log(arr)
+}
+
+parseInt("seven hundred eighty-three thousand nine hundred and nineteen")
+
+
+.split('_').splice()*/
+
+
+//Bit Counting
+var countBits = function(n) {
+  return Number(n.toString(2).split('').reduce((a,b) => Number(a)+Number(b)))
+};
+
 //Sum of Digits/Digital Root
 function digitalRoot(n) {
   while (n.length != 1) {
