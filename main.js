@@ -9,9 +9,23 @@
 }
 
 parseInt("seven hundred eighty-three thousand nine hundred and nineteen")
-
-
 .split('_').splice()*/
+
+
+// Counting Duplicates
+function duplicateCount(text){
+  const charDupes = [];                                                   // Store character duplicates in charDupes.
+  arrSorted = text.toLowerCase().split('').sort();                        // Sort characters so duplicates are side by side.
+  for (let i in arrSorted) {                                              // Loop through all characters in the text.
+    let currentChar = arrSorted[i];
+    let nextChar = arrSorted[Number(i)+1];
+    let nextNextChar = arrSorted[Number(i)+2];
+    if (currentChar == nextChar && currentChar != nextNextChar) {         // Check that your character matches the next character,
+      charDupes.push(currentChar)                                         // but not the one after. Prevents duplicates in charDupes.
+    };
+  };
+  return charDupes.length
+};
 
 
 //Bit Counting
@@ -53,7 +67,7 @@ function findOdd(arr) {                               //We are finding the numbe
     let num = arr[n]                                  //num is the value in the arr we compare with matchNum.
     let count = 0                                     //count will keep count of how many times num is equal to matchNum.
     for (let n=0; n <= arr.length; n++) {             //n is the index of num.
-      if (matchNun == num){
+      if (matchNum == num){
         count++
       }
       if (count%2 !== 0) {                            //If count is odd return matchNum because it has occured an odd amount of times.
