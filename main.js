@@ -12,6 +12,20 @@ parseInt("seven hundred eighty-three thousand nine hundred and nineteen")
 .split('_').splice()*/
 
 
+// Duplicate Encoder
+function duplicateEncode(word){
+  arr = word.toLowerCase().split('')
+  let result = ''                                                       // result will store our new string of '(' and ')' characters.
+  for (let i in arr) {
+    if (arr.filter(char => char == arr[i]).length == 1) {                // If there is only one of that character in the array proceed.
+      result += '('
+    } else {                                                            // If there is more than one of that character proceed.
+      result += ')'                                                     
+    }
+  }
+  return result
+}
+
 // Counting Duplicates
 function duplicateCount(text){
   const charDupes = [];                                                   // Store character duplicates in charDupes.
