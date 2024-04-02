@@ -12,6 +12,51 @@ parseInt("seven hundred eighty-three thousand nine hundred and nineteen")
 .split('_').splice()*/
 
 
+//Your order, please
+function order(words){
+  const array = []                                          
+  wordsArr = words.split(' ')
+  array.length = wordsArr.length                                // Generate empty indexes for words to be slotted into the new array.
+  for (let word of wordsArr) {
+    num = parseInt(word.split('').sort().join())                // Sort the word so the number is the first character, allowing parseInt to grab the number.
+    array.splice(num-1, 1, word)                                // Put the word in the right index while replacing the empty index.
+  }
+  return array.join(' ')
+}
+
+
+// Replace With Alphabet Position
+function alphabetPosition(text) {
+  const newText = []
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  text = text.toLowerCase()
+  
+  for (let i in text) {
+    num = alphabet.indexOf(text[i])+1
+    if (num != 0) {
+      newText.push(num)
+    }
+  }
+  return newText.join(' ')
+}
+
+alphabetPosition("The sunset sets at twelve o' clock.")
+
+
+// Take a Ten Minutes Walk
+function isValidWalk(walk) {
+  countN = walk.filter(i => i=='n').length
+  countS = walk.filter(i => i=='s').length
+  countE = walk.filter(i => i=='e').length
+  countW = walk.filter(i => i=='w').length
+  if ((countN == countS && countE == countW) && (countN + countS + countE + countW) == 10) {
+    return true
+  } else {
+    return false
+  }
+}
+
+
 // Duplicate Encoder
 function duplicateEncode(word){
   arr = word.toLowerCase().split('')
