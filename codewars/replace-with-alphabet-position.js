@@ -1,4 +1,4 @@
-// Replace With Alphabet Position
+// Replace With Alphabet Position v2
 function alphabetPosition(text) {
     const newText = []
     let alphabet = 'abcdefghijklmnopqrstuvwxyz'
@@ -14,6 +14,23 @@ function alphabetPosition(text) {
   }
   
   alphabetPosition("The sunset sets at twelve o' clock.")
+
+
+//Replace With Alphabet Position
+function alphabetPosition(text) {
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const arrNum = [];
+  const arrText = text.toLowerCase().split('');
+  alphabet = alphabet.split('');
+  for (i=0; i <= arrText.length; i++) {
+    let position = alphabet.indexOf(arrText[i])+1;
+    if (position != 0) {
+      arrNum.push(position);
+    }
+  }
+  text = arrNum.join(' ').replace('^0','')
+  return text;
+}
 
 
 
