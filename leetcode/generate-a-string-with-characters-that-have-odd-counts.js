@@ -3,7 +3,7 @@ var generateTheString = function generateString(n) {
     //Generate a randomized string with alphabetical letters n in length.
     let str = ''
     for(let i=0; i < n; i++) {
-        str += String.fromCharCode( Math.random()*25+97 )
+        str += String.fromCharCode( Math.random()*26+97 )
     }
     //Count how many occurences of each letter.
     for(let j=0; j < n; j++){
@@ -19,4 +19,3 @@ var generateTheString = function generateString(n) {
     }
     return str
 };
-
